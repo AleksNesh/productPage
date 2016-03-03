@@ -1,0 +1,536 @@
+@font-face
+  font-family: Open Sans
+  src: url(../fonts/opensansregular-webfont.eot)
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+  box-sizing: border-box
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section
+  display: block
+
+body
+  line-height: 1
+  font-family: Open Sans
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after,
+q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+.cf
+  &:after 
+    content: ""
+    display: table
+    clear: both
+
+
+$mob: 767px
+$tab: 1023px
+$grey: #e6e6e6
+
+.content-wrapper
+  width: 1024px
+  margin: 0 auto
+  padding: 0 18px
+
+  .title
+    text-transform: uppercase
+    font-size: 40px
+    margin: 40px 0 30px
+    width: 100%
+    color: #323232
+
+  .left-col,
+  .right-col
+    float: left
+
+  .left-col
+    width: 685px
+    
+    .img-wrap
+      height: 420px
+      width: 655px
+  
+  .product-description
+    color: #1a1a1a
+    padding-top: 20px
+    letter-spacing: 0.8px
+    width: 465px
+    line-height: 20px
+    float: left
+    
+
+    .product-title
+      font-size: 21px
+      font-weight: 700
+      
+    .product-sku
+      font-size: 18px  
+
+    .description
+      margin-top: 35px
+      font-size: 15px  
+
+    .list
+      margin: 25px 0 0
+      font-size: 15px
+      list-style: disc
+      margin-left: 20px
+
+      li
+        line-heigth: 20px
+
+    .read-more
+      margin-top: 30px
+      width: 100px
+      line-height: 35px
+      border-top: 2px solid #191919
+      background-image: url(../images/read-more.png)
+      background-repeat: no-repeat
+      background-position: 100% 50%
+      font-size: 12px
+      font-weight: 700
+      color: #191919
+      text-transform: uppercase
+      display: none 
+
+  .right-col
+    width: 303px
+    
+    .select-row
+      line-height: 40px
+      margin-top: 30px
+      
+      .color 
+        display: inline-block
+        float: right
+        width: 218px
+      
+        li
+          width: 40px
+          height: 40px
+          float: left
+          margin-left: 18px
+
+        li.active
+          border: 2px solid #4b4b4b
+
+        .white
+          border: 2px solid #d2d2d2
+          background: #fff
+
+        .blue
+          background: #add4eb
+
+        .purp
+          background: #bbafd9
+
+        .pink
+          background: #ebadc3
+
+      .color li:first-child
+        margin-left: 0
+
+      span
+        color: #4b4b4b
+        font-size: 15px
+        font-weight: 700
+    
+    .select-row:first-child
+      margin-top: 0
+      max-height: 80px
+
+    select
+      font-size: 15px
+      color: #646464
+      float: right
+    
+    .jq-selectbox
+      float: right
+    
+    .jq-selectbox__select,
+    .jq-selectbox__select:hover
+      border-radius: 0
+      background: none
+      border-color: #969696
+      height: 40px
+      line-height: 40px
+      width: 218px
+      
+    .jq-selectbox__trigger
+      border: none
+      background-image: url(../images/select.png)
+      background-repeat: no-repeat
+      background-position: 50% 50%
+      
+    .jq-selectbox__trigger-arrow 
+      display: none  
+     
+    .jq-selectbox__select-text
+      font-size: 15px
+      color: #646464 
+    
+    .price-wrapper
+      border-top: 1px solid #e3e5e7
+      border-bottom: 1px solid #e3e5e7
+      margin-top: 30px
+      padding: 25px 0
+
+      p
+        font-weight: 700
+        color: #4c4c4c
+        font-size: 14px
+        margin-bottom: 15px
+
+        span
+          color: #f3546a
+      
+      .old-price,
+      .new-price
+        font-weight: 700
+        font-size: 42px
+
+      .new-price
+        color: #f3546a
+
+      .old-price
+        color: #c8c8c8
+        text-decoration: line-through
+        margin-right: 25px
+
+      .submit
+        margin-top: 30px
+        width: 245px
+        border: 3px solid #464646
+        line-height: 50px
+        padding: 0
+        background: none
+        font-size: 12px
+        color: #454545
+        font-weight: 700
+        text-transform: uppercase
+  
+  .social-wrapper
+    width: 303px
+    line-height: 33px
+    float: right
+    margin-top: 20px
+    
+    span
+      font-size: 14px
+      font-weight: 700
+      color: #4c4c4c
+      margin-right: 22px
+
+    ul
+      display: inline-block
+      vertical-align: middle
+
+      li
+        float: left
+        margin-left: 15px
+        
+        a
+          display: block
+          width: 33px
+          height: 33px
+          background: url(../images/social.png)
+
+        a:hover
+          background: url(../images/social-h.png)
+        
+        a.t
+          background-position: -47px
+
+        a.g
+          background-position: -94px
+
+        a.p
+          background-position: -141px
+
+      li:first-child
+        margin-left: 0
+
+  .photo-wrapper
+    width: 100%
+    padding-top: 60px
+    overflow: hidden
+    margin-bottom: 100px
+
+    ul
+      width: 1000px
+
+
+      li
+        float: left
+        margin-left: 40px
+        position: relative
+
+        
+        .hover
+          width: 100%
+          height: 100%
+          position: absolute
+          background: #000
+          opacity: .8
+          filter: alpha(opacity=80)
+          top: 0
+          display: none
+          text-align: center
+          
+          p
+            font-size: 24px
+            color: #fff
+            text-align: center
+            text-transform: uppercase
+            margin-top: 65px
+
+          a
+            display: inline-block
+            width: 130px
+            line-height: 30px
+            background: #fff
+            opacity: .8
+            filter: alpha(opacity=80)
+            color: #272727
+            font-size: 12px
+            text-decoration: none
+            text-align: center
+            text-transform: uppercase
+            margin-top: 30px
+            font-weight: 600
+
+      li:hover .hover
+        display: block
+
+      li:first-child
+        margin-left: 0
+
+
+/*tablet*/
+@media only screen and (min-width: $mob + 1) and (max-width: $tab)
+  body
+    
+
+  .content-wrapper
+    width: 768px
+    padding: 0 32px
+    
+    .title
+      font-size: 36px
+
+    .left-col
+      width: 485px
+      
+      .img-wrap
+        height: 300px
+        width: 460px
+
+        img
+          height: 100%
+    
+    .right-col
+      width: 219px
+      
+      .select-row
+        margin-top: 15px
+        line-height: normal
+
+        span
+          display: inline-block
+          width: 200px
+          line-height: 30px
+
+      .select-row .color,
+      .jq-selectbox
+        float: none
+      
+      .price-wrapper
+        
+        p
+          font-size: 12px
+
+        .old-price
+          display: none
+        
+        .new-price
+          color: #272727
+        
+        .submit
+          width: 220px
+    
+    .social-wrapper
+      width: 219px
+
+      span
+        display: none
+
+    .product-description
+      margin-top: -170px
+
+      .list
+        display: none
+
+      .list.active
+        display: block
+
+      .read-more
+        display: block
+        cursor: pointer
+
+    .photo-wrapper
+
+      ul
+
+        li
+          margin-left: 25px
+
+          img
+            height: 160px
+            width: 220px
+
+          .hover
+
+            p
+              margin-top: 35px
+/*modile*/
+@media only screen and (max-width: $mob)
+  body
+    
+
+  .content-wrapper
+    width: 320px
+    padding: 0 20px
+
+    
+    .title
+      font-size: 24px
+    .left-col
+
+      .img-wrap
+        height: 180px
+        width: 280px
+        
+        img
+          height: 100%
+          width: auto
+    
+    .left-col,
+    .right-col
+      float: none
+      width: 100%
+
+    .right-col
+      margin-top: 25px
+
+      .select-row
+
+        .color 
+          width: 192px
+      
+          li
+            margin-left: 9px
+      
+      .jq-selectbox__select,
+      .jq-selectbox__select:hover
+        width: 192px
+
+      .price-wrapper
+        
+        p
+          font-size: 12px
+
+        .old-price
+          display: none
+        
+        .new-price
+          color: #272727
+        
+        .submit
+          width: 280px
+
+    .product-description
+      width: 100%
+      border-bottom: 1px solid #e3e5e7
+      padding-bottom: 25px
+
+      .product-title
+        font-size: 16px
+      
+      
+      .product-sku
+        font-size: 16px  
+
+      .description
+        font-size: 13px  
+
+      .list
+        font-size: 13px
+
+
+    .social-wrapper
+      width: 100%
+      text-align: center
+
+      span
+        display: none
+
+    .photo-wrapper
+      padding-top: 22px
+      position: relative
+
+      ul
+
+        li
+          width: 280px
+          margin: 0
+
+          img
+            width: 100%
+            height: auto
+
+      .left,
+      .right
+        position: absolute
+        z-index: 1
+        top: 50%
+        transform: translatY(50%)
+
+      .right
+        padding-right: 20px
+        right: 0
+
+        img
+          transform: rotate(180deg) 
+
+      .left
+        padding-left: 20px
